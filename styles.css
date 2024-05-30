@@ -19,7 +19,7 @@ ul {
 }
 
 h1 {
-    transition: opacity 250ms ease;
+    transition: opacity 1000ms ease;
 }
 
 .animation-container:hover h1 {
