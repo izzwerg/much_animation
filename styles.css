@@ -1,3 +1,9 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .animation-container {
   display: flex;
   position: absolute;
@@ -19,7 +25,6 @@
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
-    /* background-color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +45,7 @@
     height: 20px;
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight2 {
@@ -50,7 +55,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 22.5deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight3 {
@@ -60,7 +65,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 45deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight4 {
@@ -70,7 +75,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 67.5deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight5 {
@@ -80,7 +85,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 90deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight6 {
@@ -90,7 +95,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 112.5deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight7 {
@@ -100,7 +105,7 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 135deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
 .sunlight8 {
@@ -110,10 +115,10 @@
     background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
     border-radius: 10px;
     rotate: 157.5deg;
-    animation: myAnim 10s linear 0s infinite normal forwards;
+    animation: sunAnim 10s linear 0s infinite normal forwards;
 }
 
-@keyframes myAnim {
+@keyframes sunAnim {
 	0% {
 		transform: rotate(0);
 	}
@@ -128,3 +133,216 @@
 }
 
 /* sun end */
+
+/* grass start */
+
+.grass-container {
+    width: 500px;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0%, 10px);
+    opacity: 0;
+    transition: opacity 2000ms cubic-bezier(.98,0,.99,0);
+}
+
+.grass-all {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.grass-item {
+    height: 100%;
+    width: 20px;
+    background-color: green;
+    border: 1px solid;
+    border-color: darkgreen;
+    clip-path: polygon(50% 0%, 85% 25%, 100% 80%, 100% 100%, 0 100%, 0 80%, 15% 25%);
+}
+
+.grass-height {
+    height: 110px;
+}
+
+.grass-height1 {
+    height: 100px;
+}
+
+.grass-height2 {
+    height: 95px;
+}
+
+.grass-height3 {
+    height: 105px;
+}
+
+.grass-height4 {
+    height: 90px;
+}
+
+.grass-anim1 {
+    animation: grassAnim1 5000ms linear 0s infinite normal none;
+}
+
+@keyframes grassAnim1 {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-10px) rotate(-5deg);
+	}
+
+	30% {
+		transform: translateX(5px) rotate(5deg);
+	}
+
+	45% {
+		transform: translateX(-5px) rotate(-4deg);
+	}
+
+	60% {
+		transform: translateX(3px) rotate(4deg);
+	}
+
+	75% {
+		transform: translateX(-2px) rotate(-3deg);
+	}
+}
+
+.grass-anim2 {
+    animation: grassAnim2 4621ms linear 0s infinite normal none;
+}
+
+@keyframes grassAnim2 {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-10px) rotate(-5deg);
+	}
+
+	30% {
+		transform: translateX(5px) rotate(5deg);
+	}
+
+	45% {
+		transform: translateX(-5px) rotate(-4deg);
+	}
+
+	60% {
+		transform: translateX(3px) rotate(4deg);
+	}
+
+	75% {
+		transform: translateX(-2px) rotate(-3deg);
+	}
+}
+
+.grass-anim3 {
+    animation: grassAnim3 4128ms linear 0s infinite normal none;
+}
+
+@keyframes grassAnim3 {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-10px) rotate(-5deg);
+	}
+
+	30% {
+		transform: translateX(5px) rotate(5deg);
+	}
+
+	45% {
+		transform: translateX(-5px) rotate(-4deg);
+	}
+
+	60% {
+		transform: translateX(3px) rotate(4deg);
+	}
+
+	75% {
+		transform: translateX(-2px) rotate(-3deg);
+	}
+}
+
+.grass-anim4 {
+    animation: grassAnim4 3567ms linear 0s infinite normal none;
+}
+
+@keyframes grassAnim4 {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-10px) rotate(-5deg);
+	}
+
+	30% {
+		transform: translateX(5px) rotate(5deg);
+	}
+
+	45% {
+		transform: translateX(-5px) rotate(-4deg);
+	}
+
+	60% {
+		transform: translateX(3px) rotate(4deg);
+	}
+
+	75% {
+		transform: translateX(-2px) rotate(-3deg);
+	}
+}
+
+.grass-anim5 {
+    animation: grassAnim5 5643ms linear 0s infinite normal none;
+}
+
+@keyframes grassAnim5 {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-10px) rotate(-5deg);
+	}
+
+	30% {
+		transform: translateX(5px) rotate(5deg);
+	}
+
+	45% {
+		transform: translateX(-5px) rotate(-4deg);
+	}
+
+	60% {
+		transform: translateX(3px) rotate(4deg);
+	}
+
+	75% {
+		transform: translateX(-2px) rotate(-3deg);
+	}
+}
+
+.animation-container:hover .grass-container {
+    opacity: 1;
+}
+
+/* grass end */
