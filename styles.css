@@ -1,3 +1,130 @@
 .animation-container {
-    display: flex;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  height: 700px;
+  width: 500px;
+  overflow: hidden;
 }
+
+/* sun start */
+
+.sun-container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2000ms cubic-bezier(.98,0,.99,0);
+}
+
+.sun {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.sunlight1 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight2 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 22.5deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight3 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 45deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight4 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 67.5deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight5 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 90deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight6 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 112.5deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight7 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 135deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+.sunlight8 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, rgba(249,255,6,1) 0%, rgba(249,249,249,0) 25%, rgba(249,249,249,0) 75%, rgba(249,255,6,1) 100%);
+    border-radius: 10px;
+    rotate: 157.5deg;
+    animation: myAnim 10s linear 0s infinite normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animation-container:hover .sun-container {
+    opacity: 1;
+}
+
+/* sun end */
