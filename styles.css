@@ -581,4 +581,23 @@ h1 {
   transform: translate(96px, -238px) rotate(45deg);
 }
 
+.door {
+  height: 225px;
+  width: 100px;
+  background-color: brown;
+  position: absolute;
+  border: 2px solid;
+  border-color: black;
+  z-index: 2;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  left: -80px;
+  bottom: 60px;
+  transition: transform 1000ms ease-in-out;
+}
+
+.animation-container:hover .door {
+  transform: translate(355px, 60px) rotate(0);
+}
+
 /* home end */
