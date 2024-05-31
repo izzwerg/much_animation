@@ -40,6 +40,7 @@ h1 {
     justify-content: center;
     opacity: 0;
     transition: opacity 2000ms cubic-bezier(.98,0,.99,0);
+    z-index: 10;
 }
 
 .sun {
@@ -154,6 +155,7 @@ h1 {
     transform: translate(0%, 10px);
     opacity: 0;
     transition: opacity 2000ms cubic-bezier(.98,0,.99,0);
+    z-index: 10;
 }
 
 .grass-all {
@@ -356,3 +358,94 @@ h1 {
 }
 
 /* grass end */
+
+/* home start */
+
+.vert-wood {
+    height: 300px;
+    width: 50px;
+    background-color: sienna;
+    position: absolute;
+    border: 2px solid;
+    border-color: black;
+}
+
+.vert1 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 0;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert1 {
+    transform: rotate(0);
+    transform: translateX(140px);
+}
+
+.vert2 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 10px;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert2 {
+    transform: rotate(0);
+    transform: translate(190px, 10px);
+}
+
+.vert3 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 20px;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert3 {
+    transform: rotate(0);
+    transform: translate(240px, 20px);
+}
+
+.vert4 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 30px;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert4 {
+    transform: rotate(0);
+    transform: translate(290px, 30px);
+}
+
+.vert5 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 40px;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert5 {
+    transform: rotate(0);
+    transform: translate(340px, 40px);
+}
+
+.vert6 {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 50px;
+    left: -40px;
+    transition: all 1000ms ease-in-out;
+}
+
+.animation-container:hover .vert6 {
+    transform: rotate(0);
+    transform: translate(390px, 50px);
+}
+
+/* home end */
