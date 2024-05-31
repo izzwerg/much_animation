@@ -20,6 +20,7 @@ ul {
 
 h1 {
   transition: opacity 1000ms ease;
+  text-align: center;
 }
 
 .animation-container:hover h1 {
