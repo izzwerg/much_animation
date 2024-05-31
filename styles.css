@@ -600,4 +600,23 @@ h1 {
   transform: translate(355px, 60px) rotate(0);
 }
 
+.window {
+  height: 125px;
+  width: 100px;
+  background-color: aqua;
+  position: absolute;
+  border: 2px solid;
+  border-color: black;
+  z-index: 2;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  left: 120px;
+  bottom: 70px;
+  transition: transform 1000ms ease-in-out;
+}
+
+.animation-container:hover .window {
+  transform: translate(5px, -30px) rotate(0);
+}
+
 /* home end */
