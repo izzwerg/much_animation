@@ -233,8 +233,19 @@ h1 {
 
 /* night start */
 
-.night-filter {
+.night-container {
+  height: 700px;
+  width: 500px;
+  position: absolute;
   opacity: 0;
+}
+
+.animation-container:hover .night-container {
+  opacity: 1;
+}
+
+
+.night-filter {
   background-color: black;
   height: 700px;
   width: 500px;
@@ -249,7 +260,7 @@ h1 {
   }
 
   50% {
-    opacity:0.5;
+    opacity:0.75;
   }
 
   100% {
