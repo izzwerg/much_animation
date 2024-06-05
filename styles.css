@@ -48,7 +48,6 @@ h1 {
 .moon-container {
   width: 200px;
   height: 200px;
-  background-color: lightgrey;
   border-radius: 100%;
   position: absolute;
   top: 0;
@@ -58,6 +57,7 @@ h1 {
   transition: opacity 2000ms cubic-bezier(0.98, 0, 0.99, 0);
   animation: moonMove 10s linear 4s infinite normal backwards;
   z-index: 10;
+  box-shadow: 40px 40px 0 0 lightgray;
 }
 
 @keyframes sunMove {
@@ -72,11 +72,11 @@ h1 {
 
 @keyframes moonMove {
   0% {
-    transform: translate(0, 0px);
+    transform: translate(0, -44px);
   }
 
   100% {
-    transform: translate(-1000px, 0px);
+    transform: translate(-1000px, -44px);
   }
 }
 
