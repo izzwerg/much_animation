@@ -1,3 +1,8 @@
+:root {
+  --darkmoon: #919191;
+  --lighmoon: #ebebeb;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -45,6 +50,16 @@ h1 {
   animation: sunMove 10s linear 0s infinite normal backwards;
 }
 
+@keyframes sunMove {
+  0% {
+    transform: translate(0, -200px);
+  }
+
+  100% {
+    transform: translate(-1000px, -200px);
+  }
+}
+
 .moon-container {
   width: 200px;
   height: 200px;
@@ -57,27 +72,96 @@ h1 {
   transition: opacity 2000ms cubic-bezier(0.98, 0, 0.99, 0);
   animation: moonMove 10s linear 4s infinite normal backwards;
   z-index: 10;
-  box-shadow: 40px 40px 0 0 lightgray;
-}
-
-@keyframes sunMove {
-  0% {
-    transform: translate(0, -200px);
-  }
-
-  100% {
-    transform: translate(-1000px, -200px);
-  }
+  overflow: hidden;
 }
 
 @keyframes moonMove {
   0% {
-    transform: translate(0, -44px);
+    transform: translate(0, 0);
   }
 
   100% {
-    transform: translate(-1000px, -44px);
+    transform: translate(-1000px, 0);
   }
+}
+
+.halfmoons {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  rotate: 35deg;
+}
+
+.left-moon {
+  height: 100%;
+  width: 50%;
+  background-color: var(--darkmoon);
+  animation: moonLeft 100s step-end 0s infinite normal forwards;
+}
+
+@keyframes moonLeft {
+  0% {
+    background-color: var(--darkmoon);
+  }
+
+  50% {
+    background-color: var(--lighmoon);
+  }
+}
+
+.right-moon {
+  height: 100%;
+  width: 50%;
+  background-color: var(--lighmoon);
+  animation: moonRight 100s step-end 0s infinite normal forwards;
+}
+
+@keyframes moonRight {
+  0% {
+    background-color: var(--lighmoon);
+  }
+
+  50% {
+    background-color: var(--darkmoon);
+  }
+
+}
+
+.centre-moon {
+  position: absolute;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  left: 100px;
+  transform: translateX(-50%);
+  background-color: var(--darkmoon);
+  animation: moonCenterW 50s linear 0s infinite normal forwards, moonCenterC 100s step-end 0s infinite normal forwards;
+}
+
+@keyframes moonCenterW {
+  0% {
+    width: 200px;
+  }
+
+  50% {
+    width: 0px;
+  }
+}
+
+@keyframes moonCenterC {
+  0% {
+    background-color: var(--darkmoon);
+  }
+
+  25% {
+    background-color: var(--lighmoon);
+  }
+
+  75% {
+    background-color: var(--darkmoon);
+  }
+
 }
 
 .sun {
@@ -224,9 +308,12 @@ h1 {
   }
 }
 
-.animation-container:hover .sun-container,
-.animation-container:hover .moon-container {
+.animation-container:hover .sun-container {
   opacity: 1;
+}
+
+.animation-container:hover .moon-container {
+  opacity: 0.4;
 }
 
 /* sun end */
@@ -244,7 +331,6 @@ h1 {
   opacity: 1;
 }
 
-
 .night-filter {
   background-color: black;
   height: 700px;
@@ -256,15 +342,15 @@ h1 {
 
 @keyframes nightAnim {
   0% {
-    opacity:0;
+    opacity: 0;
   }
 
   50% {
-    opacity:0.75;
+    opacity: 0.75;
   }
 
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
@@ -638,7 +724,7 @@ h1 {
   transform: rotate(110deg);
   transform-origin: bottom right;
   bottom: 16px;
-  left: 20px;
+  left: 18px;
   transition: transform 1000ms ease-in-out;
 }
 
